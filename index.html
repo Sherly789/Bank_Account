@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Epicodus Credit Union</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body class="container">
+    <div class="row">
+      <div class-"col-md-6">
+        <h2>Your Account:</h2>
+        <form id="yourAccount" class="form-inline" role="form">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name">
+          </div>
+          <div class="form-group">
+            <label for="initialDeposit">Initial Deposit</label>
+            <input type="number" class="form-control" id="initialDeposit">
+          </div>
+          <button type="submit" class="btn btn-primary" id="registerButton">Register</button>
+        </form>
+      </div>
+      <div class-"col-md-6">
+        <h2>Deposit or Withdraw:</h2>
+        <form id="deWi" class="form-inline" role="form">
+          <div class="form-group">
+            <label for="withdraw">Withdraw:</label>
+            <input type="number" class="form-control" id="withdraw">
+          </div>
+          <div class="form-group">
+            <label for="deposit">Deposit:</label>
+            <input type="number" class="form-control" id="deposit">
+          </div>
+          <!-- <div id="account">
+            <h2>Your account is created.</h2>
+          </div> -->
+          <button type="submit" class="btn btn-primary" id="confirmButton">Confirm</button>
+        </form>
+      </div>
+    </div>
+    <div id="balance">
+      <h2></h2>
+    </div>
+  </body>
+</html>
