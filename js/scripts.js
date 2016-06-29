@@ -4,20 +4,20 @@ function Account(name, initialDeposit) {
   this.balance = initialDeposit;
 }
 
-Account.prototype.withdraw = function() {
+Account.prototype.withdraw = function(inputWithdraw) {
   this.balance -= inputWithdraw;
 }
 
-Account.prototype.deposit = function() {
+Account.prototype.deposit = function(inputDeposit) {
   this.balance += inputDeposit;
 }
 
-var userAccount;
-var inputWithdraw;
-var inputDeposit;
+
+
 
 //front
 $(document).ready(function() {
+  var userAccount;
   $("#yourAccount").submit(function(event) {
     event.preventDefault();
 
@@ -32,11 +32,11 @@ $(document).ready(function() {
   $("#deWi").submit(function(event) {
     event.preventDefault();
 
-    inputWithdraw = parseInt($("input#withdraw").val());
-    inputDeposit = parseInt($("input#deposit").val());
+    var inputWithdraw = parseInt($("input#withdraw").val());
+    var inputDeposit = parseInt($("input#deposit").val());
 
-    userAccount.withdraw();
-    userAccount.deposit();
+    userAccount.withdraw(inputWithdraw);
+    userAccount.deposit(inputDeposit);
 
     $("#balance").show();
     $("#balance").text("Your current account balance is " + userAccount.balance + ".");
